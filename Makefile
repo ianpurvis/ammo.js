@@ -38,7 +38,6 @@ EMCC_ARGS := \
 	-s ALLOW_MEMORY_GROWTH=$(ALLOW_MEMORY_GROWTH) \
 	-s NO_EXIT_RUNTIME=1 \
 	-s NO_FILESYSTEM=1 \
-	-s EXPORTED_RUNTIME_METHODS=["UTF8ToString"] \
   -s EXPORT_NAME="Ammo" \
 	-s MODULARIZE=1 \
 	--js-transform 'python ./bundle.py'
