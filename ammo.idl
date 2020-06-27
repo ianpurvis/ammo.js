@@ -119,8 +119,6 @@ interface btSoftBody {
   [Value] attribute tNodeArray m_nodes;
   [Value] attribute tFaceArray m_faces;
 
-  void addForce([Const, Ref] btVector3 force);
-  void addForce([Const, Ref] btVector3 force, long node);
   long generateBendingConstraints(long distance);
   long generateClusters(long k, optional long maxiterations);
   void setTotalMass(float mass, optional boolean fromfaces);
