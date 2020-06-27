@@ -1,4 +1,6 @@
 interface btVector3 {
+  attribute float[] m_floats;
+
   void btVector3();
   void btVector3(float x, float y, float z);
 
