@@ -4,6 +4,8 @@
 # Enable closure with CLOSURE=1
 # Enable add function support with ADD_FUNCTION_SUPPORT=1
 #
+WEBIDL_BINDER := $(EMSDK)/upstream/emscripten/tools/webidl_binder.py
+
 INCLUDES := \
 	bullet/src/btBulletDynamicsCommon.h \
 	bullet/src/BulletCollision/CollisionDispatch/btGhostObject.h \
@@ -113,7 +115,7 @@ clean :
 
 glue.cpp : ammo.idl
 	$(info 🎯 Generating ammo bindings...)
-	python $(EMSCRIPTEN_ROOT)/tools/webidl_binder.py ammo.idl glue
+	python $(WEBIDL_BINDER) ammo.idl glue
 glue.js : glue.cpp ;
 
 glue.o : glue.cpp
