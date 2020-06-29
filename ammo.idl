@@ -6,6 +6,7 @@ interface btVector3 {
 
   float dot([Ref] btVector3 v);
   float length();
+  float length2();
   void setX(float x);
   void setY(float y);
   void setZ(float z);
@@ -14,7 +15,9 @@ interface btVector3 {
   float y();
   float z();
   [Operator="*=", Ref] btVector3 op_mul(float x);
+  [Operator="/=", Ref] btVector3 op_div(float x);
   [Operator="+=", Ref] btVector3 op_add([Ref] btVector3 v);
+  [Operator="-=", Ref] btVector3 op_sub([Ref] btVector3 v);
 };
 
 interface btCollisionObject {
