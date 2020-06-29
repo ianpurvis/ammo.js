@@ -72,12 +72,7 @@ interface tFaceArray {
 [Prefix="btSoftBody::"]
 interface Node {
   [Value] attribute btVector3 m_x;
-  [Value] attribute btVector3 m_q;
-  [Value] attribute btVector3 m_v;
   [Value] attribute btVector3 m_f;
-  [Value] attribute btVector3 m_n;
-  attribute float m_im;
-  attribute float m_area;
 };
 
 [Prefix="btSoftBody::"]
@@ -88,30 +83,9 @@ interface tNodeArray {
 
 [Prefix="btSoftBody::"]
 interface Config {
-  attribute float kVCF;
-  attribute float kDP;
-  attribute float kDG;
-  attribute float kLF;
-  attribute float kPR;
-  attribute float kVC;
-  attribute float kDF;
-  attribute float kMT;
-  attribute float kCHR;
-  attribute float kKHR;
-  attribute float kSHR;
-  attribute float kAHR;
-  attribute float kSRHR_CL;
-  attribute float kSKHR_CL;
-  attribute float kSSHR_CL;
-  attribute float kSR_SPLT_CL;
-  attribute float kSK_SPLT_CL;
-  attribute float kSS_SPLT_CL;
-  attribute float maxvolume;
   attribute float timescale;
   attribute long viterations;
   attribute long piterations;
-  attribute long diterations;
-  attribute long citerations;
   attribute long collisions;
 };
 
